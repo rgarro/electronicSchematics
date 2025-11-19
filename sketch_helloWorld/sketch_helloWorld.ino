@@ -18,6 +18,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.println("gol de saprissa ...");
+  Serial.println("gol de la sele ...");
   //delay(1000);
 }
