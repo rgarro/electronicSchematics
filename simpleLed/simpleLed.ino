@@ -36,9 +36,11 @@
 void setup() {
   // put your setup code here, to run once:
   pinMode(LED, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
+  Serial.println("en el loop ...");
   // put your main code here, to run repeatedly:
     digitalWrite(LED, HIGH); // Turn the LED on
     delay(1000); // Wait for  1000 milliseconds (1 second)
