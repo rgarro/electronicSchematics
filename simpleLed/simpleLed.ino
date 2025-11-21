@@ -40,7 +40,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("en el loop ...");
+  Serial.println("luz camara ...");
   // put your main code here, to run repeatedly:
     digitalWrite(LED, HIGH); // Turn the LED on
     delay(1000); // Wait for  1000 milliseconds (1 second)
