@@ -1,37 +1,36 @@
-/**
- *Arduino UNO R3   
- *                                   +-----+
- *            +--[PWR]---------------| USB |---+
- *            |                      +-----+   |
- *            | Arduino     GND[ ][ ]RST2 [RST]|
- *            | UNO R3    MOSI2[ ][ ]SCK2  [ ] | 19/A5/SCL
- *            |              5V[ ][ ]MISO2 [ ] | 18/A4/SDA
- *            |                            [ ] | AREF
- *            |        [RX LED] [TX LED]   [ ] | GRD
- *        N/C | [ ]          [LED_BUILTIN] [ ] | 13/SCK/LED
- *      IOREF | [ ]  +---+                 [ ] | 12/MISO
- *        RST | [ ] -| A |-                [ ]~| 11/MOSI
- *        3V3 | [ ] -| T |-                [ ]~| 10/SS
- *         5V | [ ] -| M |-                [ ]~| 9
- *        GND | [ ] -| E |-                [ ] | 8
- *        GND | [ ] -| G |-                    |
- *        Vin | [ ] -| A |-                [ ] | 7
- *            |     -| 3 |-                [ ]~| 6
- *      A0/14 | [ ] -| 2 |-                [ ]~| 5
- *      A1/15 | [ ] -| 8 |-                [ ] | 4
- *      A2/16 | [ ] -| P |-                [ ]~| 3/INT1
- *      A3/17 | [ ]  +---+ RST SCK MISO    [ ] | 2/INT0
- *  SDA/A4/18 | [ ]        [ ] [ ] [ ]     [ ] | 1/TXD>
- *  SCL/A5/19 | [ ]        [ ] [ ] [ ]     [ ] | 0/RXD<
- *            |            GND MOSI 5V ________/
- *            \_______________________/
- *
- *
- *
- *
- *@author Rolando <rgarro@gmail.com> <https://emptyart.github.io/>
+/*
+ carLights
+
+   ---------------------------.
+ `/""""/""""/|""|'|""||""|   ' \.
+ /    /    / |__| |__||__|      |
+/----------=====================|
+| \  /V\  /    _.               |
+|()\ \W/ /()   _            _   |
+|   \   /     / \          / \  |-( )
+=C========C==_| ) |--------| ) _/==] _-{_}_)
+ \_\_/__..  \_\_/_ \_\_/ \_\_/__.__.
+
+ Car Lights Prototype Simulator
+ Final Project for Automotive Electricity Class
+ 
+ Created 5 December 2025
+ by Rolando Garro <rgarro@gmail.com>
+ https://emptyart.github.io/
  */
 #define LED 13 // the pin the LED is connected to
+int pinFreno	=	4;	// el pin 4 conectado al pulsador
+int pinRetro	=	2;// el pin 2 conectado al pulsador
+int pinDirecIzq	=	7;// el pin 7 conectado al pulsador
+int pinDirecDer	=	1;// el pin 1 conectado al pulsador
+int pinLEDrojo	=	9; 	// el pin 9 conectado al LED
+int pinLEDblanco	=	6; // el pin 6 conectado al LED
+int pinLEDambarIzq	=	3; // el pin 3 conectado al LED
+int pinLEDambarDer	=	5; // el pin 5 conectado al LED
+int valor_freno=0; 			//valor inicial del pulsador de freno
+int valor_retro=0; 			//valor inicial del pulsador de retroceso
+int valor_derecha=0; 		//valor inicial del pulsador direccional derecha
+int valor_izquierda=0; 		//valor inicial del pulsador direccional izquierda
 
 void setup() {
   // put your setup code here, to run once:
