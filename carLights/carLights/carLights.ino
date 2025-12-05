@@ -47,11 +47,53 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("luz camara ...");
-  // put your main code here, to run repeatedly:
-    digitalWrite(LED, HIGH); // Turn the LED on
-    delay(1000); // Wait for  1000 milliseconds (1 second)
-    digitalWrite(LED, LOW); // Turn the LED off
-    delay(1000); // Wait for 1000 milliseconds (1 second)
+  valor_freno=digitalRead(pinFreno);
+
+  if (valor_freno == HIGH){
+  // se prende el LED:  
+  digitalWrite(pinLEDrojo, HIGH);
+  
+  }else	{
+  //si el pulsador no está presionado, se apaga el led
+  digitalWrite(pinLEDrojo, LOW);
+  }
+  valor_retro=digitalRead(pinRetro);
+  if (valor_retro == HIGH){
+  // se prende el LED:  
+  digitalWrite(pinLEDblanco, HIGH);
+  delay(1000);
+  digitalWrite(pinLEDblanco, LOW);
+  delay(1000);  
+  
+  }else	{
+  //si el pulsador no está presionado, se apaga el led
+  digitalWrite(pinLEDblanco, LOW);
+  }
+  valor_izquierda=digitalRead(pinDirecIzq);
+  
+  if (valor_izquierda == HIGH){
+  // se prende el LED:  
+  digitalWrite(pinLEDambarIzq, HIGH);
+  delay(500);
+  digitalWrite(pinLEDambarIzq, LOW);
+  delay(500);
+     
+  }else	{
+  //si el pulsador no está presionado, se apaga el led
+  digitalWrite(pinLEDambarIzq, LOW);
+        
+  }
+   valor_derecha=digitalRead(pinDirecDer);
+  if (valor_derecha == HIGH){
+  // se prende el LED:  
+  digitalWrite(pinLEDambarDer, HIGH);
+  delay(500);
+  digitalWrite(pinLEDambarDer, LOW);
+  delay(500);
+  
+  }else	{
+  //si el pulsador no está presionado, se apaga el led
+  digitalWrite(pinLEDambarDer, LOW);
+  }
 }
 
