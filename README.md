@@ -1,5 +1,9 @@
 # electronicSchematics 
 
+#ARDUINO FireBase Auth Electric Lock Opener
+
+Manage your Users from Firebase Auth to gate your relay kit properly
+
 ## Arduino Magnetic Log Collector
 
 Any Arduino has amazing logging capabilities, figure out the cheapest way of collecting them
