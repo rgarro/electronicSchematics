@@ -1,9 +1,15 @@
-void setup() {
-  // put your setup code here, to run once:
+// C++ code
+int led = 13;
 
+void setup()
+{
+  pinMode(led, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
+void loop()
+{
+  digitalWrite(led, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
 }
