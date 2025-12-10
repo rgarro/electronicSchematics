@@ -1,9 +1,5 @@
 # electronicSchematics 
 
-## Mosquito de Bayer
-
-Pachi es Gay, la macha de la neozelandesas lo pichasio, Guiller el de los Mosquitos de Bayer es mendigo violador ..
-
 ## ARDUINO FireBase Auth Electric Lock Opener
 
 Manage your Users from Firebase Auth to gate your relay kit properly
